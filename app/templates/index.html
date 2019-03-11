@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+    <title>三爷的图库</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+
+</head>
+<body>
+    <div style="background-color:darkorange;height: 200px;">
+        <div class="container">
+            <div class="row clearfix">
+                <div class="col-md-12 column">
+                    <div class=" text-center">
+                        <div style="padding-top: 5px; color: #231f20">
+                            <h1>三爷的图库</h1>
+                            <h5>通关人脸识别识别图片是否含有<b>三爷</b>后进行保存显示</h5>
+                        </div>
+                        <div>
+                            <form action="/search">
+                                <div class="form-group">
+                                    <input class="form-control" id="search" name="s" type="text" placeholder="{% if search %}{{ search }}{% else %}请输入搜索{% endif %}" style="width:100%;height:30px;"/>
+                                </div> 
+                        </div style="clean:both">
+                        <div>
+                            <button class="btn btn-default" style="height:30px;"><span class="glyphicon glyphicon-search" style="font-size: 14px;"></span>搜索标题</button>
+                        </form>
+                            <button class="btn btn-default" style="height:30px;" onclick="document.getElementById('addfile').click();" ><span class="glyphicon glyphicon-upload" style="font-size: 14px;"></span>上传内容</button>
+                            <input type="file" id="addfile" onchange="FileUpload()" style="display: none">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="main">
+        {% for image in images%}       
+			<div class="col-sm-6 col-md-3" style="margin-top:15px;">
+                <div class="card">
+                    <img class="card__picture" src="/static/images/{{ image.filename }}">
+                    <div class="card-infos">
+                    <div target="_blank" class="card__title">{{ image.title }}</div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+    function FileUpload() {
+        var form_data = new FormData();
+        var file_info =$('#addfile')[0].files[0];
+        form_data.append('csrfmiddlewaretoken','{{ csrf_token }}')
+        form_data.append('file',file_info);
+        $.ajax({
+            url:'/upload_ajax/',
+            type:'POST',
+            data: form_data,
+            processData: false,  // tell jquery not to process the data
+            contentType: false, // tell jquery not to set contentType
+            success: function(callback) {
+                alert('已上传,正在识别。识别成功后将自动显示')
+            }
+        });
+    }
+</script>
+</html>
