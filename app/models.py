@@ -8,3 +8,6 @@ class Picture(models.Model):
     haveher = models.BooleanField()
     good =  models.IntegerField()
     show = models.BooleanField(default=True)
+
+    def __str__(self):
+        return self.title

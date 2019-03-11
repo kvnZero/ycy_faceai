@@ -7,8 +7,8 @@ from random import randint
 
 class faceClass():
     def __init__(self):
-        baseDir = os.path.dirname(os.path.abspath(__name__));
-        self.facesdir = os.path.join(baseDir,'app/static/faces','sanye');
+        baseDir = os.path.dirname(os.path.abspath(__name__))
+        self.facesdir = os.path.join(baseDir,'app/static/faces','ycy')
         self.path = self.facesdir
         self.total_image_name = []
         self.total_face_encoding = []
