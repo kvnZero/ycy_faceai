@@ -1,70 +1,252 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8"> 
-    <title>三爷的图库</title>
-    <link rel="stylesheet" href="/static/css/main.css">
-	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css">  
+<html lang="en">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <title>Ycy Picture</title>
+    <!-- <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css"> -->
+    <link rel="stylesheet" href="src/css/element-ui.css">
+    <link rel="stylesheet" href="src/css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/index.css">
 </head>
+
 <body>
-    <div style="background-color:darkorange;height: 200px;">
-        <div class="container">
-            <div class="row clearfix">
-                <div class="col-md-12 column">
-                    <div class=" text-center">
-                        <div style="padding-top: 5px; color: #231f20">
-                            <h1>三爷的图库</h1>
-                            <h5>通关人脸识别识别图片是否含有<b>三爷</b>后进行保存显示</h5>
-                        </div>
-                        <div>
-                            <form action="/search">
-                                <div class="form-group">
-                                    <input class="form-control" id="search" name="s" type="text" placeholder="{% if search %}{{ search }}{% else %}请输入搜索{% endif %}" style="width:100%;height:30px;"/>
+
+    <div class="container-fluid">
+
+        <header class="container-fluid">
+            <!-- 顶部导航 -->
+            <div class="container">
+                <div class="top-nav row">
+                    <div class="col">
+                        <a href="page2.html">关于我们</a>
+                        <a href="javascript:;">item</a>
+                    </div>
+                    <div class="navlogin col">
+                        <div id="app">
+                            <div id="userLogin" class="float-right">
+                                <a href="javascript:;" v-on:click="show2 = !show2">登录</a>
+                                <span>/</span>
+                                <a href="javascript:;" v-on:click="show2 = !show2">注册</a>
+                            </div>
+                            <!-- 登录界面 -->
+                            <div class="signPage" v-if="show2">
+                                <div class="sign-from">
+                                    <div class="info">
+                                        <h1 class="brand">Ycy Picture</h1>
+                                        <p id="intro">{{userinfo}}Ycy Picture，分享…………</p>
+                                    </div>
+                                    <el-form :status-icon="infoIcon" label-width="0" class="demo-ruleForm"
+                                        justify="center">
+                                        <el-form-item>
+                                            <el-input v-model="ruleForm2.name" placeholder="请输入用户名"></el-input>
+                                        </el-form-item>
+                                        <el-form-item>
+                                            <el-input v-model="ruleForm2.pass" type="password" autocomplete="off"
+                                                placeholder="请输入密码" show-password></el-input>
+                                        </el-form-item>
+                                        <div class="info-if" v-if="show">
+                                            <el-form-item prop="checkPass">
+                                                <el-input v-model="ruleForm2.checkPass" type="password"
+                                                    autocomplete="off" placeholder="请再次输入密码" show-password></el-input>
+                                            </el-form-item>
+                                            <el-form-item prop="age">
+                                                <el-input v-model="ruleForm2.age" placeholder="请输入年龄"></el-input>
+                                            </el-form-item>
+                                        </div>
+                                        <el-form-item>
+                                            <!-- @click="submitForm('ruleForm2')" -->
+                                            <el-button class="sign-btn" type="primary">{{userinfo}}
+                                            </el-button>
+                                        </el-form-item>
+                                        <p class="login">
+                                            {{userif}}有账号?
+                                            <a href="javascript:;" @click="Landing('ruleForm2')">{{userinfoBot}}</a>
+                                        </p>
+                                    </el-form>
                                 </div>
-                                <div style="clean:both">
-                                </div>
-                            <button class="btn btn-default" style="height:30px;"><span class="glyphicon glyphicon-search" style="font-size: 14px;"></span>搜索标题</button>
-                            </form>
-                            <button class="btn btn-default" style="height:30px;" onclick="document.getElementById('addfile').click();" ><span class="glyphicon glyphicon-upload" style="font-size: 14px;"></span>上传内容</button>
-                            <input type="file" id="addfile" onchange="FileUpload()" style="display: none">
+                                <div class="bg" v-on:click="show2 = !show2"></div>
+                            </div>
                         </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="#" class="logo-img">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div id="main-nav" class="main-nav">
+                    <a href="#" class="active">首页</a>
+                    <a href="#">首页</a>
+                </div>
+            </div>
+            <!-- 缩略图卡片集 -->
+            <div class="container">
+                <div class="card-info row text-center">
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!-- 主内容区 -->
+        <div class="container mt-3 mb-5">
+            <div class="row m-0">
+                <!-- 左侧导航 -->
+                <div class="left-nav col-2 text-center mr-4">
+                    <div id="nav-pf">
+                        <a href="javascript:;" class="left-gif">
+                            <img src="images/home.png" alt="" width="100%">
+                        </a>
+                        <div class="left-item">
+                            <a href="javascript:;">itemItem</a>
+                            <a href="javascript:;">itemItem</a>
+                            <a href="javascript:;">itemItem</a>
+                            <a href="javascript:;">itemItem</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- 中部内容 -->
+
+                <!-- 热门+搜索框 -->
+                <div class="main-content col-8">
+                    <div id="skr" class="demo-input-size">
+                        <div class="skr-btn">
+                            <el-button-group>
+                                <el-button type="primary">最新<i class="el-icon-caret-top el-icon--right"></i></el-button>
+                                <el-button type="primary">热门<i class="el-icon-caret-top el-icon--right"></i></el-button>
+                            </el-button-group>
+                        </div>
+                        <div class="skr-input">
+                            <el-input placeholder="请输入内容" v-model="input10" clearable>
+                                <el-button slot="append" icon="el-icon-search"></el-button>
+                            </el-input>
+                        </div>
+                    </div>
+                    <!-- 文章 -->
+                    <div class="article">
+                        <div class="article-content text-center m-auto">
+                            <!-- 用户图 -->
+                            <div class="article-img  text-center">
+                                <img src="images/saber.jpg" alt="" width="100%">
+                            </div>
+                            <!-- 标题、点赞 -->
+                            <div class="row article-title">
+                                <div class="col-8 t-zdy">
+                                    <a href="javascript:;">demo1</a>
+                                    <button type="button" class="t-btn btn btn-primary"><a
+                                            href="javascript:;">举报</a></button>
+                                </div>
+                                <div class="col-4 like text-right t-zdy">
+                                    <a href="javascript:;">
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>123
+                                    </a>
+                                    <a href="javascript:;">
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>123
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 用户信息 -->
+                        <div class="article-user text-center m-auto row">
+                            <div class="a-info col-10">
+                                <div class="user-img"><img src="images/item.jpg" alt="" width="100%"></div>
+                                <div class="user-title text-left pl-3">
+                                    <a href="javascript:;" class="pb-2">User1</a>
+                                    <button type="button" class="btn-zdy btn btn-warning btn-sm">关注</button>
+                                </div>
+                            </div>
+                            <div class="a-time col-2">
+                                <span id="issueTime">24</span>分钟前
+                            </div>
+                        </div>
+                    </div>
+                    <div class="article">
+                        <div class="article-content text-center m-auto">
+                            <!-- 用户图 -->
+                            <div class="article-img  text-center">
+                                <img src="images/Cache_3654827e8a2dddfb..jpg" alt="" width="100%">
+                            </div>
+                            <!-- 标题、点赞 -->
+                            <div class="row article-title">
+                                <div class="col-8 t-zdy">
+                                    <a href="javascript:;">demo1</a>
+                                    <button type="button" class="t-btn btn btn-primary"><a
+                                            href="javascript:;">举报</a></button>
+                                </div>
+                                <div class="col-4 like text-right t-zdy">
+                                    <a href="javascript:;">
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>123
+                                    </a>
+                                    <a href="javascript:;">
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>123
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 用户信息 -->
+                        <div class="article-user text-center m-auto row">
+                            <div class="a-info col-10">
+                                <div class="user-img"><img src="images/item.jpg" alt="" width="100%"></div>
+                                <div class="user-title text-left pl-3">
+                                    <a href="javascript:;" class="pb-2">User1</a>
+                                    <button type="button" class="btn-zdy btn btn-warning btn-sm">关注</button>
+                                </div>
+                            </div>
+                            <div class="a-time col-2">
+                                <span id="issueTime">24</span>分钟前
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧侧栏 -->
+                <div class="main-sideba col text-center">
+                    <div class="notice">公告栏</div>
+                    <div class="notic-item">
+                        <a href="#">item1itemItem</a>
+                        <a href="#">item1itemItem</a>
+                        <a href="#">item1itemItem</a>
                     </div>
                 </div>
             </div>
         </div>
+
     </div>
-    <div id="main">
-        {% for image in images%}       
-			<div class="col-sm-6 col-md-3" style="margin-top:15px;">
-                <div class="card">
-                    <img class="card__picture" src="/static/images/{{ image.filename }}">
-                    <div class="card-infos">
-                    <div target="_blank" class="card__title">{{ image.title }}</div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
+
+    </script>
+    <!-- Vue -->
+    <script src="src/js/vue.js"></script>
+    <!-- Element -->
+    <script src="src/js/element-ui.js"></script>
+    <script src="src/js/VueProtect.js"></script>
+
+    <script src="src/js/jquery.js"></script>
+    <script src="src/js/index.js"></script>
+
 </body>
-<script src="https://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-<script>
-    function FileUpload() {
-        var form_data = new FormData();
-        var file_info =$('#addfile')[0].files[0];
-        form_data.append('csrfmiddlewaretoken','{{ csrf_token }}')
-        form_data.append('file',file_info);
-        $.ajax({
-            url:'/upload_ajax/',
-            type:'POST',
-            data: form_data,
-            processData: false,  // tell jquery not to process the data
-            contentType: false, // tell jquery not to set contentType
-            success: function(callback) {
-                alert('已上传,正在识别。识别成功后将自动显示')
-            }
-        });
-    }
-</script>
+
 </html>

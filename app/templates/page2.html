@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="src/css/element-ui.css">
+    <link rel="stylesheet" href="src/css/bootstrap.css">
+    <link rel="stylesheet" href="src/css/page2.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <header class="container-fluid">
+            <!-- 顶部导航 -->
+            <div class="container">
+                <div class="top-nav row">
+                    <div class="col">
+                        <a href="javascript:;">关于我们</a>
+                        <a href="javascript:;">item</a>
+                    </div>
+                    <div class="navlogin col">
+                        <div id="app">
+                            <div id="userLogin" class="float-right">
+                                <a href="javascript:;" v-on:click="show2 = !show2">登录</a>
+                                <span>/</span>
+                                <a href="javascript:;" v-on:click="show2 = !show2">注册</a>
+                            </div>
+                            <!-- 登录界面 -->
+                            <div class="signPage" v-if="show2">
+                                <div class="sign-from">
+                                    <div class="info">
+                                        <h1 class="brand">Ycy Picture</h1>
+                                        <p id="intro">{{userinfo}}Ycy Picture，分享…………</p>
+                                    </div>
+                                    <el-form :status-icon="infoIcon" label-width="0" class="demo-ruleForm"
+                                        justify="center">
+                                        <el-form-item>
+                                            <el-input v-model="ruleForm2.name" placeholder="请输入用户名"></el-input>
+                                        </el-form-item>
+                                        <el-form-item>
+                                            <el-input v-model="ruleForm2.pass" type="password" autocomplete="off"
+                                                placeholder="请输入密码" show-password></el-input>
+                                        </el-form-item>
+                                        <div class="info-if" v-if="show">
+                                            <el-form-item prop="checkPass">
+                                                <el-input v-model="ruleForm2.checkPass" type="password"
+                                                    autocomplete="off" placeholder="请再次输入密码" show-password></el-input>
+                                            </el-form-item>
+                                            <el-form-item prop="age">
+                                                <el-input v-model="ruleForm2.age" placeholder="请输入年龄"></el-input>
+                                            </el-form-item>
+                                        </div>
+                                        <el-form-item>
+                                            <!-- @click="submitForm('ruleForm2')" -->
+                                            <el-button class="sign-btn" type="primary">{{userinfo}}
+                                            </el-button>
+                                        </el-form-item>
+                                        <p class="login">
+                                            {{userif}}有账号?
+                                            <a href="javascript:;" @click="Landing('ruleForm2')">{{userinfoBot}}</a>
+                                        </p>
+                                    </el-form>
+                                </div>
+                                <div class="bg" v-on:click="show2 = !show2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="logo">
+                    <a href="#" class="logo-img">
+                        <img src="images/logo.png" alt="">
+                    </a>
+                </div>
+                <div id="main-nav" class="main-nav">
+                    <a href="#" class="active">首页</a>
+                    <a href="#">首页</a>
+                </div>
+            </div>
+            <!-- 缩略图卡片集 -->
+            <div class="container">
+                <div class="card-info row text-center">
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card-item">
+                            <a href="javascript:;"><img src="images/item.jpg" alt=""></a>
+                            <a href="javascript:;" class="card-text">777777</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="y-content row mt-3">
+                <div class="y-img col">
+                    <div class="y-lg-img m-2">
+                        <img src="images/Cache_3654827e8a2dddfb..jpg" alt="" width="100%">
+                    </div>
+                </div>
+                <div class="y-notice col">
+                    <!--  -->
+                    <ul class="list-group m-2">
+                        <li class="list-group-item">Cras justo odio</li>
+                        <li class="list-group-item">Dapibus ac facilisis in</li>
+                        <li class="list-group-item">Morbi leo risus</li>
+                        <li class="list-group-item">Porta ac consectetur ac</li>
+                        <li class="list-group-item">Vestibulum at eros</li>
+                    </ul>
+                    <div class="y-sm-img m-2">
+                        <img src="images/Cache_3654827e8a2dddfb..jpg" alt="" width="100px">
+                    </div>
+                    <!-- 搜索框 -->
+                    <div id="skr" class="demo-input-size m-2">
+                        <div class="skr-input">
+                            <el-input placeholder="请输入内容" v-model="input2" clearable>
+                                <el-button slot="append" icon="el-icon-search"></el-button>
+                            </el-input>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Vue -->
+    <script src="src/js/vue.js"></script>
+    <!-- Element -->
+    <script src="src/js/element-ui.js"></script>
+
+    <script src="src/js/VuePage2.js"></script>
+
+</body>
+
+</html>

@@ -9,7 +9,7 @@ face = faceClass()
 
 def index(request):
     images = Picture.objects.all().order_by('-id')
-    return render(request, "index.html", {'images':images})
+    return render(request, "main.html", {'images':images})
 
 def search(request):
     search = request.GET['s']
