@@ -11,13 +11,13 @@ class User(models.Model):
         return self.username
 
 class Picture(models.Model):
-    userid = models.IntegerField()
+    user = models.ForeignKey('User',to_field='id',on_delete=models.PROTECT)
     filename = models.ImageField()
     title = models.CharField(max_length=256)
     haveher = models.BooleanField()
-    good =  models.IntegerField()
+    good =  models.IntegerField(default=0)
     show = models.BooleanField(default=True)
-
+    time = models.DateTimeField(auto_now=True)
     def __str__(self):
         return self.title
 

@@ -1,5 +1,8 @@
 {% extends 'base.html' %}
 
+{% block css %}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
 {% block content %}
 <!-- 缩略图卡片集 -->
 	<div class="container">
@@ -7,25 +10,25 @@
 			<div class="col">
 				<div class="card-item">
 					<a href="javascript:;"><img src="/static/images/item.jpg" alt=""></a>
-					<a href="javascript:;" class="card-text">777777</a>
+					<a href="javascript:;" class="card-text">最新合集1</a>
 				</div>
 			</div>
 			<div class="col">
 				<div class="card-item">
 					<a href="javascript:;"><img src="/static/images/item.jpg" alt=""></a>
-					<a href="javascript:;" class="card-text">777777</a>
+					<a href="javascript:;" class="card-text">最新合集2</a>
 				</div>
 			</div>
 			<div class="col">
 				<div class="card-item">
 					<a href="javascript:;"><img src="/static/images/item.jpg" alt=""></a>
-					<a href="javascript:;" class="card-text">777777</a>
+					<a href="javascript:;" class="card-text">最新合集3</a>
 				</div>
 			</div>
 			<div class="col">
 				<div class="card-item">
 					<a href="javascript:;"><img src="/static/images/item.jpg" alt=""></a>
-					<a href="javascript:;" class="card-text">777777</a>
+					<a href="javascript:;" class="card-text">最新合集3</a>
 				</div>
 			</div>
 		</div>
@@ -39,10 +42,10 @@
                     <img src="/static/images/home.png" alt="" width="100%">
                 </a>
                 <div class="left-item">
-                    <a href="javascript:;">itemItem</a>
-                    <a href="javascript:;">itemItem</a>
-                    <a href="javascript:;">itemItem</a>
-                    <a href="javascript:;">itemItem</a>
+                    <a href="javascript:;">点赞最多</a>
+                    <a href="javascript:;">关注用户</a>
+                    <a href="javascript:;">随机吸花</a>
+                    <a href="javascript:;">上传作品</a>
                 </div>
             </div>
         </div>
@@ -64,25 +67,23 @@
                 </div>
             </div>
             <!-- 文章 -->
+            {% for image in images%}
             <div class="article">
                 <div class="article-content text-center m-auto">
                     <!-- 用户图 -->
                     <div class="article-img  text-center">
-                        <img src="/static/images/saber.jpg" alt="" width="100%">
+                        <img src="/static/images/{{ image.filename }}" alt="" width="100%">
                     </div>
                     <!-- 标题、点赞 -->
                     <div class="row article-title">
                         <div class="col-8 t-zdy">
-                            <a href="javascript:;">demo1</a>
+                            <a href="javascript:;">{{ image.title }}</a>
                             <button type="button" class="t-btn btn btn-primary"><a
                                     href="javascript:;">举报</a></button>
                         </div>
                         <div class="col-4 like text-right t-zdy">
                             <a href="javascript:;">
-                                <span class="glyphicon glyphicon-thumbs-up"></span>123
-                            </a>
-                            <a href="javascript:;">
-                                <span class="glyphicon glyphicon-thumbs-down"></span>123
+                                <span class="glyphicon glyphicon-thumbs-up"></span>{{ image.good }}
                             </a>
                         </div>
                     </div>
@@ -90,62 +91,26 @@
                 <!-- 用户信息 -->
                 <div class="article-user text-center m-auto row">
                     <div class="a-info col-10">
-                        <div class="user-img"><img src="/static/images/item.jpg" alt="" width="100%"></div>
+                        <div class="user-img"><img src="/static/images/{{ image.user.image }}" alt="" width="100%"></div>
                         <div class="user-title text-left pl-3">
-                            <a href="javascript:;" class="pb-2">User1</a>
+                            <a href="javascript:;" class="pb-2">{{ image.user.username }}</a>
                             <button type="button" class="btn-zdy btn btn-warning btn-sm">关注</button>
                         </div>
                     </div>
                     <div class="a-time col-2">
-                        <span id="issueTime">24</span>分钟前
+                        <span>{{ image.time|timesince }}前上传</span>
                     </div>
                 </div>
             </div>
-            <div class="article">
-                <div class="article-content text-center m-auto">
-                    <!-- 用户图 -->
-                    <div class="article-img  text-center">
-                        <img src="/static/images/Cache_3654827e8a2dddfb..jpg" alt="" width="100%">
-                    </div>
-                    <!-- 标题、点赞 -->
-                    <div class="row article-title">
-                        <div class="col-8 t-zdy">
-                            <a href="javascript:;">demo1</a>
-                            <button type="button" class="t-btn btn btn-primary"><a
-                                    href="javascript:;">举报</a></button>
-                        </div>
-                        <div class="col-4 like text-right t-zdy">
-                            <a href="javascript:;">
-                                <span class="glyphicon glyphicon-thumbs-up"></span>123
-                            </a>
-                            <a href="javascript:;">
-                                <span class="glyphicon glyphicon-thumbs-down"></span>123
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <!-- 用户信息 -->
-                <div class="article-user text-center m-auto row">
-                    <div class="a-info col-10">
-                        <div class="user-img"><img src="/static/images/item.jpg" alt="" width="100%"></div>
-                        <div class="user-title text-left pl-3">
-                            <a href="javascript:;" class="pb-2">User1</a>
-                            <button type="button" class="btn-zdy btn btn-warning btn-sm">关注</button>
-                        </div>
-                    </div>
-                    <div class="a-time col-2">
-                        <span id="issueTime">24</span>分钟前
-                    </div>
-                </div>
-            </div>
+            {% endfor %}
         </div>
         <!-- 右侧侧栏 -->
         <div class="main-sideba col text-center">
-            <div class="notice">公告栏</div>
+            <div class="notice">热门合集</div>
             <div class="notic-item">
-                <a href="#">item1itemItem</a>
-                <a href="#">item1itemItem</a>
-                <a href="#">item1itemItem</a>
+                <a href="#">图集链接1</a>
+                <a href="#">图集链接2</a>
+                <a href="#">图集链接3</a>
             </div>
         </div>
     </div>

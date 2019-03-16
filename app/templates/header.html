@@ -9,47 +9,36 @@
 			<div class="navlogin col">
 				<div id="app">
 					<div id="userLogin" class="float-right">
-						<a href="javascript:;" v-on:click="show2 = !show2">登录</a>
+
+						<a href="#login" role="button" data-toggle="modal" data-toggle="modal" data-target="#login">登录</a>
 						<span>/</span>
-						<a href="javascript:;" v-on:click="show2 = !show2">注册</a>
+						<a>注册</a>
 					</div>
- <div class="signPage" v-if="show2">
-                                <div class="sign-from">
-                                    <div class="info">
-                                        <h1 class="brand">Ycy Picture</h1>
-                                        <p id="intro">{{userinfo}}Ycy Picture，分享…………</p>
-                                    </div>
-                                    <el-form :status-icon="infoIcon" label-width="0" class="demo-ruleForm"
-                                        justify="center">
-                                        <el-form-item>
-                                            <el-input v-model="ruleForm2.name" placeholder="请输入用户名"></el-input>
-                                        </el-form-item>
-                                        <el-form-item>
-                                            <el-input v-model="ruleForm2.pass" type="password" autocomplete="off"
-                                                placeholder="请输入密码" show-password></el-input>
-                                        </el-form-item>
-                                        <div class="info-if" v-if="show">
-                                            <el-form-item prop="checkPass">
-                                                <el-input v-model="ruleForm2.checkPass" type="password"
-                                                    autocomplete="off" placeholder="请再次输入密码" show-password></el-input>
-                                            </el-form-item>
-                                            <el-form-item prop="age">
-                                                <el-input v-model="ruleForm2.age" placeholder="请输入年龄"></el-input>
-                                            </el-form-item>
-                                        </div>
-                                        <el-form-item>
-                                            <!-- @click="submitForm('ruleForm2')" -->
-                                            <el-button class="sign-btn" type="primary">{{userinfo}}
-                                            </el-button>
-                                        </el-form-item>
-                                        <p class="login">
-                                            {{userif}}有账号?
-                                            <a href="javascript:;" @click="Landing('ruleForm2')">{{userinfoBot}}</a>
-                                        </p>
-                                    </el-form>
+                    <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
+                         <form  class="demo-ruleForm" action="/" method="POST">
+                        <div class="modal-dialog" style="max-width:330px">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h3 class="model-title">Ycy Picture</h3>
                                 </div>
-                                <div class="bg" v-on:click="show2 = !show2"></div>
+                                <div class="modal-body">
+
+                                    <div class="form-inline">
+                                         <label for="username">用户名：</label><input type="text" class="form-control" id="username" />
+                                    </div>
+                                        <br/>
+                                    <div class="form-inline">
+                                         <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" class="form-control" id="password" />
+                                    </div>
+						    </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-danger" data-dismiss="modal">关闭</button>
+                                  <button type="submit" class="btn btn-success">提交</button>
                             </div>
+                            </div>
+                        </div>{% csrf_token %}
+                         </form>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -59,8 +48,8 @@
 			</a>
 		</div>
 		<div id="main-nav" class="main-nav">
-			<a href="#" class="active">首页</a>
-			<a href="#">首页</a>
+			<a href="/" {% if request.path == '/' %}class="active"{% endif %}>首页</a>
+			<a href="/check/" {% if request.path == '/check/' %}class="active"{% endif %}>审查图片</a>
 		</div>
 	</div>
 

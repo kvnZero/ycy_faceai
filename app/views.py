@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-from app.models import Picture
+from app.models import Picture, User
 from faceai_web.settings import BASE_DIR
 from app.faceget import faceClass
 import threading
@@ -9,7 +9,11 @@ face = faceClass()
 
 def index(request):
     images = Picture.objects.all().order_by('-id')
+
     return render(request, "main.html", {'images':images})
+
+def check(request):
+    return render(request, "check.html")
 
 def search(request):
     search = request.GET['s']
