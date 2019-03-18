@@ -9,29 +9,30 @@
 <div class="y-content row mt-3">
     <div class="y-img col">
         <div class="y-lg-img m-2">
-            <img src="/static/images/Cache_3654827e8a2dddfb..jpg" alt="" width="100%">
+            <img src="/static/images/ycy/{{ face.picturefile }}" alt="" width="100%">
         </div>
     </div>
     <div class="y-notice col">
-        <!--  -->
-        <ul class="list-group m-2">
+        <div class="y-sm-img m-2 text-center">
+            <img src="/static/test/ycy/{{ face.facefile }}" alt="" width="100px">
+        </div>
+         <form  class="demo-ruleForm" action="/check/" method="POST">
+
+             <div class="text-center">
+                 <div id="idshow">人脸照片ID:{{ face.id }}</div>
+                 <input type="hidden" name="showid" value="{{ face.id }}">
+                 <button type="submit" class="btn btn-success" name="value" value="1">&nbsp;是&nbsp;</button>
+             <button type="submit" class="btn btn-success" name="value" value="0">不是</button>
+             <div class="btn btn-success" onclick="location.reload(true);">跳过</div>{% csrf_token %}
+             </div>
+         </form>
+            <ul class="list-group m-2">
             <li class="list-group-item">照片均通过爬虫/收集/网友上传</li>
             <li class="list-group-item">如转发他人照片请先获取版权</li>
             <li class="list-group-item">如您照片未经授权出现于此请联系我们删除</li>
             <li class="list-group-item">邮箱:abigeater@163.com</li>
             <li class="list-group-item">请回答以下人脸是否超越以帮助我们收集更多的样本</li>
         </ul>
-        <div class="y-sm-img m-2 text-center">
-            <img src="/static/images/Cache_3654827e8a2dddfb..jpg" alt="" width="100px">
-        </div>
-        <!-- 搜索框 -->
-        <div id="skr" class="demo-input-size m-2">
-            <div class="skr-input">
-                <el-input placeholder="如是输入是即可,输入其他则不是." v-model="input2" clearable>
-                    <el-button slot="append" icon="el-icon-search"></el-button>
-                </el-input>
-            </div>
-        </div>
     </div>
 </div>
 </div>

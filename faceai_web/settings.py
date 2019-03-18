@@ -126,3 +126,7 @@ STATICFILES_FINDERS = (
 )
 
 MEDIA_ROOT = 'app/static/images'
+
+
+FACE_IMAGE = os.path.join(BASE_DIR,'app/static/faces','ycy')
+FACE_TEST_IMAGE = os.path.join(BASE_DIR,'app/static/test','ycy')

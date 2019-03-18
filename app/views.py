@@ -1,19 +1,57 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from django.http import HttpResponse
-from app.models import Picture, User
-from faceai_web.settings import BASE_DIR
+from app.models import Picture, User, Face
+from faceai_web.settings import BASE_DIR, FACE_IMAGE, FACE_TEST_IMAGE
 from app.faceget import faceClass
 import threading
 import os
+import shutil
 face = faceClass()
 
 def index(request):
     images = Picture.objects.all().order_by('-id')
-
-    return render(request, "main.html", {'images':images})
+    if request.method=="POST":
+        if request.POST['username']:
+            username = request.POST['username']
+            if request.POST['password']:
+                password = request.POST['password']
+                user = User.objects.filter(username=username, password=password).first()
+                if user:
+                    request.session['username']= user.username
+    try:
+        return render(request, "main.html", {'images': images, 'username': request.session['username']})
+    except KeyError:
+        return render(request, "main.html", {'images':images})
 
 def check(request):
-    return render(request, "check.html")
+    if request.method=="POST":
+        if request.POST['showid']:
+            showid = request.POST['showid']
+            if request.POST['value']:
+                value = request.POST['value']
+                face = Face.objects.filter(id=showid).first()
+                if value=='1':
+                    face.t_number = face.t_number+1
+                elif value=='0':
+                    face.f_number = face.f_number + 1
+                allinput = face.t_number+face.f_number
+                if allinput>10 and face.t_number/allinput>0.8:
+                    copyface(face.facefile)
+                    face.show = True
+                face.save()
+                return redirect('/check/')
+    getface = Face.objects.filter(show=False).order_by('?')[0]
+    try:
+        return render(request, "check.html", {'face': getface, 'username': request.session['username']})
+    except KeyError:
+        return render(request, "check.html", {'face': getface})
+
+def copyface(faceimg):
+    def _start():
+        shutil.copyfile(FACE_TEST_IMAGE+'/%s' % faceimg, FACE_IMAGE+'/%s' % faceimg)
+    getThread = threading.Thread(target=_start)
+    getThread.setDaemon(True)
+    getThread.start()
 
 def search(request):
     search = request.GET['s']

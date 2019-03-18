@@ -9,10 +9,13 @@
 			<div class="navlogin col">
 				<div id="app">
 					<div id="userLogin" class="float-right">
-
+						{% if username %}
+						欢迎您,<a>{{ username }}</a>
+						{% else %}
 						<a href="#login" role="button" data-toggle="modal" data-toggle="modal" data-target="#login">登录</a>
 						<span>/</span>
 						<a>注册</a>
+						{% endif %}
 					</div>
                     <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="login" aria-hidden="true">
                          <form  class="demo-ruleForm" action="/" method="POST">
@@ -24,11 +27,11 @@
                                 <div class="modal-body">
 
                                     <div class="form-inline">
-                                         <label for="username">用户名：</label><input type="text" class="form-control" id="username" />
+                                         <label for="username">用户名：</label><input type="text" class="form-control" id="username" name="username" />
                                     </div>
                                         <br/>
                                     <div class="form-inline">
-                                         <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" class="form-control" id="password" />
+                                         <label for="password">密&nbsp;&nbsp;&nbsp;&nbsp;码：</label><input type="password" class="form-control" id="password" name="password" />
                                     </div>
 						    </div>
                             <div class="modal-footer">

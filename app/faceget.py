@@ -4,11 +4,12 @@ import face_recognition
 import os
 from time import ctime
 from random import randint
+from faceai_web.settings import FACE_IMAGE
 
 class faceClass():
     def __init__(self):
         baseDir = os.path.dirname(os.path.abspath(__name__))
-        self.facesdir = os.path.join(baseDir,'app/static/faces','ycy')
+        self.facesdir = FACE_IMAGE
         self.path = self.facesdir
         self.total_image_name = []
         self.total_face_encoding = []

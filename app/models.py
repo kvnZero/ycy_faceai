@@ -21,3 +21,9 @@ class Picture(models.Model):
     def __str__(self):
         return self.title
 
+class Face(models.Model):
+    picturefile = models.CharField(max_length=255, default="")
+    facefile = models.CharField(max_length=255)
+    t_number = models.IntegerField(default=0) #true
+    f_number = models.IntegerField(default=0) #false
+    show = models.BooleanField(default=False)
