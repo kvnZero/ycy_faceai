@@ -18,10 +18,16 @@ def index(request):
                 user = User.objects.filter(username=username, password=password).first()
                 if user:
                     request.session['username']= user.username
+                    request.session['id']=user.id
     try:
-        return render(request, "main.html", {'images': images, 'username': request.session['username']})
+        return render(request, "main.html", {'images': images, 'username': request.session.get('username')})
     except KeyError:
         return render(request, "main.html", {'images':images})
+
+def lgout(request):
+    del request.session['username']
+    del request.session['id']
+    return redirect('/')
 
 def check(request):
     if request.method=="POST":
@@ -36,17 +42,19 @@ def check(request):
                     face.f_number = face.f_number + 1
                 allinput = face.t_number+face.f_number
                 if allinput>10 and face.t_number/allinput>0.8:
+                    #当人工识别率达到80%的情况为人脸
                     copyface(face.facefile)
                     face.show = True
                 face.save()
                 return redirect('/check/')
     getface = Face.objects.filter(show=False).order_by('?')[0]
     try:
-        return render(request, "check.html", {'face': getface, 'username': request.session['username']})
+        return render(request, "check.html", {'face': getface, 'username': request.session.get('username')})
     except KeyError:
         return render(request, "check.html", {'face': getface})
 
 def copyface(faceimg):
+    #复制到人脸样本目录
     def _start():
         shutil.copyfile(FACE_TEST_IMAGE+'/%s' % faceimg, FACE_IMAGE+'/%s' % faceimg)
     getThread = threading.Thread(target=_start)
@@ -77,16 +85,18 @@ def upload_ajax(request):
         for chunk in file_obj.chunks():
             f.write(chunk)
         f.close()
-        faceai(os.path.join(BASE_DIR, 'app/static', 'images'), file_obj.name)
+        faceai(request.session.get('id'),os.path.join(BASE_DIR, 'app/static', 'images'), file_obj.name)
         return HttpResponse('OK')
 
-def faceai(filepath, filename):
+def faceai(userid,filepath, filename):
     def _start():
         if face.faceai(filepath+"/"+filename):
-            p = Picture(filename=filename, title="default", haveher=True, good=0)
+            user = User.objects.get(id=userid)
+            p = Picture(user=user,filename=filename, title="default", haveher=True, good=0)
             p.save()
             print("Upload Picture")
-    
+        else:
+            print("Have other Picture")
     getThread = threading.Thread(target=_start)
     getThread.setDaemon(True)
     getThread.start()
