@@ -1,5 +1,5 @@
 from django.db import models
-
+import django.utils.timezone as timezone
 # Create your models here.
 
 class User(models.Model):
@@ -17,7 +17,8 @@ class Picture(models.Model):
     haveher = models.BooleanField()
     good =  models.IntegerField(default=0)
     show = models.BooleanField(default=True)
-    time = models.DateTimeField(auto_now=True)
+    time = models.DateTimeField(default=timezone.now)
+    read = models.BooleanField(default=False)
     def __str__(self):
         return self.title
 

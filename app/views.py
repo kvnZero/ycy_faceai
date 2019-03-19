@@ -2,14 +2,13 @@ from django.shortcuts import render,redirect
 from django.http import HttpResponse
 from app.models import Picture, User, Face
 from faceai_web.settings import BASE_DIR, FACE_IMAGE, FACE_TEST_IMAGE
-from app.faceget import faceClass
 import threading
 import os
 import shutil
-face = faceClass()
+import random
 
 def index(request):
-    images = Picture.objects.all().order_by('-id')
+    images = Picture.objects.filter(haveher=True,read=True,show=True).order_by('-time')
     if request.method=="POST":
         if request.POST['username']:
             username = request.POST['username']
@@ -68,7 +67,7 @@ def search(request):
 
 def getimg(request,page):
     pagenumber = ((int(page)-1)*20)+1
-    images = Picture.objects.all().order_by('-id')[pagenumber:int(page)*20]
+    images = Picture.objects.filter(haveher=True,read=True,show=True).order_by('-id')[pagenumber:int(page)*20]
     img={'title':'','filename':''}
     json_text=""
     for image in images:
@@ -80,23 +79,19 @@ def getimg(request,page):
 
 def upload_ajax(request):
     if request.method == 'POST':
+        if not request.session.get('id'):
+            return HttpResponse("请先登录后再上传")
         file_obj = request.FILES.get('file')
-        f = open(os.path.join(BASE_DIR, 'app/static', 'images', file_obj.name), 'wb')
-        for chunk in file_obj.chunks():
-            f.write(chunk)
-        f.close()
-        faceai(request.session.get('id'),os.path.join(BASE_DIR, 'app/static', 'images'), file_obj.name)
-        return HttpResponse('OK')
-
-def faceai(userid,filepath, filename):
-    def _start():
-        if face.faceai(filepath+"/"+filename):
-            user = User.objects.get(id=userid)
-            p = Picture(user=user,filename=filename, title="default", haveher=True, good=0)
+        type_list = ['.jpg', '.png']
+        if os.path.splitext(file_obj.name)[1].lower() in type_list:
+            savename = "%s_im_%s" % (random.randint(10000,99999),file_obj.name)
+            f = open(os.path.join(BASE_DIR, 'app/static', 'images', savename), 'wb')
+            for chunk in file_obj.chunks():
+                f.write(chunk)
+            f.close()
+            user = User.objects.get(id=request.session.get('id'))
+            p = Picture(user=user, filename=savename, title="default", haveher=False, good=0, show=False)
             p.save()
-            print("Upload Picture")
-        else:
-            print("Have other Picture")
-    getThread = threading.Thread(target=_start)
-    getThread.setDaemon(True)
-    getThread.start()
+            return HttpResponse('OK')
+        return HttpResponse("错误上传类型")
+

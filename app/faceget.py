@@ -17,11 +17,14 @@ class faceClass():
 
     def loadface(self, path):
         for fn in os.listdir(path):
-            self.total_face_encoding.append(
-                face_recognition.face_encodings(
-                    face_recognition.load_image_file(path + "/" + fn))[0])
-            fn = fn[:(len(fn) - 4)]  
-            self.total_image_name.append(fn) 
+            try:
+                self.total_face_encoding.append(
+                    face_recognition.face_encodings(
+                        face_recognition.load_image_file(path + "/" + fn))[0])
+                fn = fn[:(len(fn) - 4)]
+                self.total_image_name.append(fn)
+            except IndexError:
+                pass
 
     def faceai(self, filename):
         frame = cv2.imread(filename)
