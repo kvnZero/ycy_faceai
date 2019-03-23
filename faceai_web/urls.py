@@ -15,13 +15,25 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app.views import index, search, upload_ajax, check,lgout
+from app.views import index, upload_ajax, check, lgout
+from app.views import good_show, feed_show, random_show
+from django.conf.urls.static import static
+from faceai_web import settings
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('search/',search),
     path('', index),
     path('check/', check),
+    path('lgout/', lgout),
+
+    path('admin/', admin.site.urls),
+
     path('upload_ajax/', upload_ajax),
-    path('lgout/', lgout)
+
+    path('list/good', good_show),
+    path('list/feed', feed_show),
+    path('list/random', random_show),
+
+
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

@@ -25,7 +25,7 @@ SECRET_KEY = '^-w40s+e99bo475!!a=(s%hc(r&!=h9^4e7gj&00lt23q@elg5'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1','abigeater.com']
 
 
 # Application definition
@@ -120,13 +120,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/2.1/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
     "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
-
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'app/static'),
+)
 MEDIA_ROOT = 'app/static/images'
 
 
-FACE_IMAGE = os.path.join(BASE_DIR,'app/static/faces','ycy')
-FACE_TEST_IMAGE = os.path.join(BASE_DIR,'app/static/test','ycy')
+FACE_IMAGE = os.path.join(BASE_DIR,'static/faces','ycy')
+FACE_TEST_IMAGE = os.path.join(BASE_DIR,'static/test')

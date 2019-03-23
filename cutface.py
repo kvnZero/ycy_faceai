@@ -21,7 +21,7 @@ def signImage(model_name, images_path):
             testImg = frame[top:bottom, left:right]
             i = randint(10000, 99999)
             savefilename = '%s_%s.jpg' % (model_name, i)
-            filename = '%s/%s' % (os.path.join(os.path.dirname(os.path.abspath(__name__)),'app/static/test','ycy'),savefilename)
+            filename = '%s/%s' % (os.path.join(os.path.dirname(os.path.abspath(__name__)),'app/static/test'),savefilename)
             cv2.imwrite(filename, testImg, [int(cv2.IMWRITE_PNG_COMPRESSION), 0])
             img = Image.open(filename)
             img.show()
@@ -51,7 +51,7 @@ def cutImage(oldfile,model_name, filepath, left,top,right,bottom):
     frame = frame[top:bottom, left:right]
     i = randint(10000, 99999)
     filename = '%s_%s.jpg' % ( model_name, i)
-    cv2.imwrite('%s/%s' % (os.path.join(os.path.dirname(os.path.abspath(__name__)),'app/static/test','ycy'),filename), frame, [int(cv2.IMWRITE_PNG_COMPRESSION), 0])
+    cv2.imwrite('%s/%s' % (os.path.join(os.path.dirname(os.path.abspath(__name__)),'static/test'),filename), frame, [int(cv2.IMWRITE_PNG_COMPRESSION), 0])
     saveFace(oldfile,filename)
 
-getface("app/static/images/ycy")
+#getface("app/static/images/ycy")
