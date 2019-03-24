@@ -125,6 +125,11 @@ def upload_ajax(request):
             return HttpResponse("请先登录后再上传")
         file_obj = request.FILES.get('file')
         type_list = ['.jpg', '.png']
+        try:
+            title = request.POST['title']
+        except KeyError:
+            title = "无标题"
+
         if os.path.splitext(file_obj.name)[1].lower() in type_list:
             savename = "%s_im_%s" % (random.randint(10000, 99999), file_obj.name)
             f = open(os.path.join(BASE_DIR, 'static', 'images', savename), 'wb')
@@ -139,7 +144,7 @@ def upload_ajax(request):
                 img.thumbnail((w / 2, h / 2), Image.ANTIALIAS)
                 savename = "%s_%s" % ('new', savename)
                 img.save("%s/%s" % (os.path.join(BASE_DIR, 'static', 'images'), savename), "JPEG")
-            p = Picture(user=user, filename=savename, title="default", haveher=False, good=0, show=False)
+            p = Picture(user=user, filename=savename, title=title, haveher=False, good=0, show=False)
             p.save()
             return HttpResponse('OK')
         return HttpResponse("错误上传类型")
