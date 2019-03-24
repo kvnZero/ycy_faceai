@@ -54,4 +54,4 @@ def cutImage(oldfile,model_name, filepath, left,top,right,bottom):
     cv2.imwrite('%s/%s' % (os.path.join(os.path.dirname(os.path.abspath(__name__)),'static/test'),filename), frame, [int(cv2.IMWRITE_PNG_COMPRESSION), 0])
     saveFace(oldfile,filename)
 
-#getface("app/static/images/ycy")
+getface("ycy")

@@ -2,42 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89d8ef59-5249-4b32-b0bd-ccc6078a69da" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/app/static/images/12392_im_img-47989ddd4486c91b6f13b3a0399fcf3f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/40118_im_img-47989ddd4486c91b6f13b3a0399fcf3f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/54715_im_img-47989ddd4486c91b6f13b3a0399fcf3f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/img-54016ed42b0da471ab90057b263d3f98.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/img-54100acd9f6185146fe12b7868e1f755.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/img-8623b40359e30e07801e00c148333dc5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/img-8643ac4d2f9113573645d4a95134d82f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/img-8807c89ee7ef9e09671e5aaa19ecb72c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/img-8807c89ee7ef9e09671e5aaa19ecb72c_FMa5hXx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/item.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/item_0U8K8EN.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-047231faf3b8984a5e2fcc67988740a4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-47638e62ed90fe1b8bb84c6b75a002ce.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-47989ddd4486c91b6f13b3a0399fcf3f.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-54016ed42b0da471ab90057b263d3f98.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-54100acd9f6185146fe12b7868e1f755.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-56365f684c5273a01fabb647da37e346.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/images/ycy/img-8807c89ee7ef9e09671e5aaa19ecb72c.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/VuePage2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/js/VueProtect.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/js/VueProtect.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_11326.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_21641.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_24889.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_30162.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_52785.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_97350.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/static/test/ycy/ycy_97591.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/templates/check.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/check.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cutface.py" beforeDir="false" afterPath="$PROJECT_DIR$/cutface.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/faceai_web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai_web/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/faceai_web/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai_web/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -47,12 +16,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/faceai_web/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="403">
-              <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="21" />
+            <state relative-caret-position="268">
+              <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
               <folding>
                 <element signature="e#634#666#0" expanded="true" />
               </folding>
@@ -60,11 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/main.html">
+      <file leaf-file-name="cutface.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/cutface.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+            <state relative-caret-position="570">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#10#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="check.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/templates/check.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="172">
+              <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
             </state>
           </provider>
         </entry>
@@ -86,14 +67,14 @@
       <list>
         <option value="/media/abigeater/其他/ycy_faceai/faceai_web/settings.py" />
         <option value="$PROJECT_DIR$/app/static/js/VueProtect.js" />
-        <option value="$PROJECT_DIR$/app/templates/check.html" />
-        <option value="$PROJECT_DIR$/cutface.py" />
         <option value="$PROJECT_DIR$/app/templates/base.html" />
-        <option value="$PROJECT_DIR$/faceai_web/settings.py" />
         <option value="$PROJECT_DIR$/faceai.py" />
         <option value="$PROJECT_DIR$/faceai_web/urls.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
         <option value="$PROJECT_DIR$/app/templates/main.html" />
+        <option value="$PROJECT_DIR$/cutface.py" />
+        <option value="$PROJECT_DIR$/app/templates/check.html" />
+        <option value="$PROJECT_DIR$/faceai_web/settings.py" />
       </list>
     </option>
   </component>
@@ -107,7 +88,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -118,23 +98,13 @@
             <path>
               <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
               <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
               <item name="faceai_web" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,6 +121,31 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="cutface" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="ycy_faceai" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/cutface.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Python.cutface" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -172,13 +167,13 @@
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Python Console" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32861635" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -197,6 +192,23 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/faceai_web/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="e#634#666#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="44" column="30" selection-start-line="44" selection-start-column="30" selection-end-line="44" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/VueProtect.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -212,13 +224,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/check.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="14" column="30" lean-forward="true" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/faceget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17" />
@@ -228,9 +233,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -248,9 +250,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/tests.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///media/abigeater/其他/ycy_faceai/faceai_web/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1507">
@@ -258,47 +257,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db.sqlite3">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/cutface.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="749">
-          <caret line="56" column="19" selection-start-line="56" selection-start-column="19" selection-end-line="56" selection-end-column="19" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/apps.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/faceai.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="32" selection-start-column="32" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/faceai_web/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="25" column="12" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
-          <folding>
-            <element signature="e#2441#2837#0" />
-          </folding>
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/django/urls/conf.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -307,39 +267,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/models.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="51" column="40" lean-forward="true" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        <state relative-caret-position="283">
+          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
+    <entry file="file://$PROJECT_DIR$/app/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-735">
+          <caret line="44" column="33" selection-start-line="44" selection-start-column="33" selection-end-line="44" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceai.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
+          <caret column="32" selection-start-column="32" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/faceai_web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="21" />
+        <state relative-caret-position="268">
+          <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
           <folding>
             <element signature="e#634#666#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/main.html">
+    <entry file="file://$PROJECT_DIR$/cutface.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="46" column="40" selection-start-line="46" selection-start-column="40" selection-end-line="46" selection-end-column="40" />
+        <state relative-caret-position="570">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/faceai_web/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="217">
+          <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/check.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
         </state>
       </provider>
     </entry>
