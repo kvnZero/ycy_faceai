@@ -1,0 +1,47 @@
+*** Starting uWSGI 2.0.18 (64bit) on [Mon Mar 25 13:41:33 2019] ***
+compiled with version: 7.3.0 on 25 March 2019 05:37:40
+os: Linux-4.15.0-29-generic #31-Ubuntu SMP Tue Jul 17 15:39:52 UTC 2018
+nodename: VM-228-13-ubuntu
+machine: x86_64
+clock source: unix
+pcre jit disabled
+detected number of CPU cores: 1
+current working directory: /home/ubuntu/ycy_faceai
+detected binary path: /home/ubuntu/ycy_faceai/venv/bin/uwsgi
+chdir() to /home/ubuntu/ycy_faceai
+your processes number limit is 7102
+your memory page size is 4096 bytes
+detected max file descriptor number: 1024
+lock engine: pthread robust mutexes
+thunder lock: disabled (you can enable it with --thunder-lock)
+uwsgi socket 0 bound to UNIX address /home/ubuntu/ycy_faceai/ycy_faceai.sock fd 3
+Python version: 3.6.7 (default, Oct 22 2018, 11:32:17)  [GCC 8.2.0]
+PEP 405 virtualenv detected: /home/ubuntu/ycy_faceai/venv
+Set PythonHome to /home/ubuntu/ycy_faceai/venv
+*** Python threads support is disabled. You can enable it with --enable-threads ***
+Python main interpreter initialized at 0x55c4f298fc90
+your server socket listen backlog is limited to 100 connections
+your mercy for graceful operations on workers is 60 seconds
+mapped 437424 bytes (427 KB) for 5 cores
+*** Operational MODE: preforking ***
+WSGI app 0 (mountpoint='') ready in 0 seconds on interpreter 0x55c4f298fc90 pid: 20898 (default app)
+*** uWSGI is running in multiple interpreter mode ***
+spawned uWSGI master process (pid: 20898)
+spawned uWSGI worker 1 (pid: 20901, cores: 1)
+spawned uWSGI worker 2 (pid: 20902, cores: 1)
+spawned uWSGI worker 3 (pid: 20903, cores: 1)
+spawned uWSGI worker 4 (pid: 20904, cores: 1)
+spawned uWSGI worker 5 (pid: 20905, cores: 1)
+[pid: 20901|app: 0|req: 1/1] 121.50.44.105 () {42 vars in 941 bytes} [Mon Mar 25 13:41:52 2019] GET / => generated 8756 bytes in 162 msecs (HTTP/1.1 200) 5 headers in 292 bytes (2 switches on core 0)
+[pid: 20901|app: 0|req: 2/2] 82.102.27.195 () {38 vars in 594 bytes} [Mon Mar 25 13:42:55 2019] GET / => generated 8859 bytes in 3 msecs (HTTP/1.0 200) 5 headers in 292 bytes (2 switches on core 0)
+[pid: 20902|app: 0|req: 1/3] 121.50.44.105 () {42 vars in 953 bytes} [Mon Mar 25 13:43:11 2019] GET /admin/ => generated 6987 bytes in 104 msecs (HTTP/1.1 200) 6 headers in 227 bytes (2 switches on core 0)
+[pid: 20901|app: 0|req: 3/4] 121.50.44.105 () {44 vars in 1020 bytes} [Mon Mar 25 13:43:19 2019] GET /admin/app/picture/ => generated 4359 bytes in 76 msecs (HTTP/1.1 200) 7 headers in 395 bytes (2 switches on core 0)
+[pid: 20902|app: 0|req: 2/5] 121.50.44.105 () {42 vars in 905 bytes} [Mon Mar 25 13:43:23 2019] GET /admin/jsi18n/ => generated 7684 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (2 switches on core 0)
+[pid: 20905|app: 0|req: 1/6] 121.50.44.105 () {44 vars in 1052 bytes} [Mon Mar 25 13:43:28 2019] GET /admin/app/picture/19/change/ => generated 8849 bytes in 117 msecs (HTTP/1.1 200) 7 headers in 395 bytes (2 switches on core 0)
+[pid: 20901|app: 0|req: 4/7] 121.50.44.105 () {42 vars in 915 bytes} [Mon Mar 25 13:43:29 2019] GET /admin/jsi18n/ => generated 7684 bytes in 5 msecs (HTTP/1.1 200) 4 headers in 132 bytes (2 switches on core 0)
+[pid: 20901|app: 0|req: 5/8] 121.50.44.105 () {44 vars in 1160 bytes} [Mon Mar 25 13:49:48 2019] GET /admin/app/picture/19/change/91791_im_img-8772f9380decb76b3fde4bb075742f8d.jpg => generated 0 bytes in 0 msecs (HTTP/1.1 301) 3 headers in 184 bytes (2 switches on core 0)
+[pid: 20903|app: 0|req: 1/9] 121.50.44.105 () {44 vars in 1162 bytes} [Mon Mar 25 13:49:49 2019] GET /admin/app/picture/19/change/91791_im_img-8772f9380decb76b3fde4bb075742f8d.jpg/ => generated 0 bytes in 36 msecs (HTTP/1.1 302) 7 headers in 325 bytes (2 switches on core 0)
+[pid: 20901|app: 0|req: 6/10] 121.50.44.105 () {44 vars in 1176 bytes} [Mon Mar 25 13:49:50 2019] GET /admin/app/picture/19/change/91791_im_img-8772f9380decb76b3fde4bb075742f8d.jpg/change/ => generated 0 bytes in 4 msecs (HTTP/1.1 302) 8 headers in 567 bytes (1 switches on core 0)
+[pid: 20902|app: 0|req: 3/11] 121.50.44.105 () {44 vars in 1294 bytes} [Mon Mar 25 13:49:50 2019] GET /admin/ => generated 7196 bytes in 13 msecs (HTTP/1.1 200) 7 headers in 311 bytes (1 switches on core 0)
+[pid: 20901|app: 0|req: 7/12] 121.50.44.105 () {42 vars in 941 bytes} [Mon Mar 25 13:49:57 2019] GET / => generated 8756 bytes in 4 msecs (HTTP/1.1 200) 5 headers in 292 bytes (2 switches on core 0)
+[pid: 20901|app: 0|req: 8/13] 121.50.44.105 () {44 vars in 972 bytes} [Mon Mar 25 13:54:10 2019] GET / => generated 10586 bytes in 5 msecs (HTTP/1.1 200) 5 headers in 293 bytes (2 switches on core 0)

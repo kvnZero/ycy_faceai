@@ -1,4 +1,4 @@
-from faceai_web.settings import FACE_IMAGE
+from faceai_web.settings import IMAGE_DIR
 from app.faceget import faceClass
 import os
 import django
@@ -12,7 +12,7 @@ def getPicture():
     if len(pictures)>0:
         print("Get %s Picture" % len(pictures))
     for p in pictures:
-        if face.faceai("%s/%s" % (FACE_IMAGE, p.filename)):
+        if face.faceai("%s/%s" % (IMAGE_DIR, p.filename)):
             p.haveher = True
             p.show = True
             print("Id:%s is ycy" % p.id)
