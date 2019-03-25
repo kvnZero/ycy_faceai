@@ -2,6 +2,8 @@ from faceai_web.settings import IMAGE_DIR
 from app.faceget import faceClass
 import os
 import django
+import sys
+import time
 face = faceClass()
 os.environ.setdefault("DJANGO_SETTINGS_MODULE", "faceai_web.settings")
 django.setup()
@@ -24,4 +26,13 @@ def getPicture():
 
 
 if __name__ == "__main__":
-    getPicture()
+    if sys.argv[1].startswith('-'):
+        option = sys.argv[1][1:]
+        if option == 'w':
+            print("Watch Data")
+            while True:
+                getPicture()
+                time.sleep(3)
+    else:
+        print("Watch once")
+        getPicture()
