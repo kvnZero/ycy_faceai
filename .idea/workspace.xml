@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89d8ef59-5249-4b32-b0bd-ccc6078a69da" name="Default" comment="" />
+    <list default="true" id="89d8ef59-5249-4b32-b0bd-ccc6078a69da" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/header.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/templates/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/app/templates/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/app/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/faceai_web/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/faceai_web/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/index.css" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -11,26 +20,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/templates/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+            <state relative-caret-position="270">
+              <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/templates/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
-                <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views.py">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="134">
-              <caret line="130" column="25" lean-forward="true" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#44#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="174">
+              <caret line="325" selection-start-line="325" selection-end-line="346" selection-end-column="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/static/css/index.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="549">
+              <caret line="345" column="1" selection-start-line="345" selection-start-column="1" selection-end-line="345" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -59,7 +83,10 @@
         <option value="$PROJECT_DIR$/app/templates/check.html" />
         <option value="$PROJECT_DIR$/faceai_web/settings.py" />
         <option value="$PROJECT_DIR$/app/views.py" />
+        <option value="$PROJECT_DIR$/app/templates/header.html" />
+        <option value="$PROJECT_DIR$/static/css/index.css" />
         <option value="$PROJECT_DIR$/app/templates/main.html" />
+        <option value="$PROJECT_DIR$/app/static/css/index.css" />
       </list>
     </option>
   </component>
@@ -73,6 +100,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -89,18 +117,30 @@
               <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
               <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
               <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
-              <item name="faceai_web" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ycy_faceai" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ycy_faceai" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -158,6 +198,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="1366" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24963397" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -187,13 +228,44 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1440">
+          <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="25" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1260">
+          <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1950">
+          <caret line="130" column="25" lean-forward="true" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#44#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/faceai_web/urls.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="10" lean-forward="true" selection-start-line="33" selection-start-column="10" selection-end-line="33" selection-end-column="21" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -212,25 +284,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/static/js/VuePage2.js" />
-    <entry file="file:///media/abigeater/其他/ycy_faceai/app/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="103" column="37" lean-forward="true" selection-start-line="81" selection-start-column="3" selection-end-line="103" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///media/abigeater/其他/ycy_faceai/app/views.py" />
     <entry file="file://$PROJECT_DIR$/app/faceget.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17" />
       </provider>
     </entry>
-    <entry file="file:///media/abigeater/其他/ycy_faceai/faceai_web/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="29" lean-forward="true" selection-start-line="29" selection-end-line="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///media/abigeater/其他/ycy_faceai/faceai_web/urls.py" />
     <entry file="file://$PROJECT_DIR$/app/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -238,36 +298,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///media/abigeater/其他/ycy_faceai/app/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///media/abigeater/其他/ycy_faceai/faceai_web/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1507">
-          <caret line="117" lean-forward="true" selection-start-line="117" selection-end-line="117" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/admin.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file:///media/abigeater/其他/ycy_faceai/app/templates/base.html" />
+    <entry file="file:///media/abigeater/其他/ycy_faceai/faceai_web/settings.py" />
     <entry file="file:///usr/local/lib/python3.6/dist-packages/django/urls/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
           <caret line="58" column="30" selection-start-line="58" selection-start-column="30" selection-end-line="58" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#0#28#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -282,9 +318,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="268">
           <caret line="24" column="14" selection-start-line="24" selection-start-column="14" selection-end-line="24" selection-end-column="14" />
-          <folding>
-            <element signature="e#634#666#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -299,36 +332,60 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="124">
           <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#10#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/faceai_web/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+        <state relative-caret-position="307">
+          <caret line="30" column="24" lean-forward="true" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="130" column="25" lean-forward="true" selection-start-line="130" selection-start-column="25" selection-end-line="130" selection-end-column="25" />
+        <state relative-caret-position="268">
+          <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
           <folding>
             <element signature="e#0#44#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/vueTest.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/js/VueProtect.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/main.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="84" column="37" lean-forward="true" selection-start-line="84" selection-start-column="37" selection-end-line="84" selection-end-column="37" />
+        <state relative-caret-position="270">
+          <caret line="110" column="37" selection-start-line="110" selection-start-column="37" selection-end-line="110" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
-            <element signature="n#style#0;n#input#0;n#div#1;n#form#0;n#div#1;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#form#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#header#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="325" selection-start-line="325" selection-end-line="346" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/static/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="549">
+          <caret line="345" column="1" selection-start-line="345" selection-start-column="1" selection-end-line="345" selection-end-column="1" />
         </state>
       </provider>
     </entry>

@@ -322,3 +322,25 @@ header{
 .skr-input{
     width: 50%;
 }
+@media only screen and (max-width:1024px){
+    .main-content{
+        padding: 0;
+    }
+    .left-nav,
+    .main-sideba{
+        display: none;
+    }
+    .main-content{
+        flex: 1;
+        max-width: 100%!important;
+    }
+    .card-text{
+        padding: 0;
+    }
+    .card-text a{
+        font-size: 12px;
+    }
+    #skr{
+        display: none;
+    }
+}

@@ -46,12 +46,12 @@
 			</div>
 		</div>
 		<div class="logo">
-			<a href="#" class="logo-img">
-				<img src="/static/images/logo.png" alt="">
+			<a href="/" class="logo-img">
+				<img src="/static/images/logo.png" alt="Ycy Picture Logo">
 			</a>
 		</div>
 		<div id="main-nav" class="main-nav">
-			<a href="/" {% if request.path == '/' %}class="active"{% endif %}>首页</a>
+			<a href="/" {% if request.path != '/check/' %}class="active"{% endif %}>首页</a>
 			<a href="/check/" {% if request.path == '/check/' %}class="active"{% endif %}>审查图片</a>
 		</div>
 	</div>

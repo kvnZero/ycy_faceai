@@ -45,7 +45,8 @@ def feed_show(request):
     return HttpResponse('Writing...')
 
 def random_show(request):
-    images = Picture.objects.filter(haveher=True, read=True, show=True).order_by('?')[9]
+
+    images = Picture.objects.filter(haveher=True, read=True, show=True).order_by('?')[:9]
     if request.method == "POST":
         if request.POST['username']:
             username = request.POST['username']
